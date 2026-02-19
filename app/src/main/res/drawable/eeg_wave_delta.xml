@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Delta wave: slow, large amplitude -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="40dp"
+    android:viewportWidth="280"
+    android:viewportHeight="40">
+    <path
+        android:strokeColor="#7B2FFE"
+        android:strokeWidth="2"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,20 C20,0 40,40 60,20 C80,0 100,40 120,20 C140,0 160,40 180,20 C200,0 220,40 240,20 C260,0 280,40 280,20" />
+</vector>

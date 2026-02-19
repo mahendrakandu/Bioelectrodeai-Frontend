@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Beta wave: fast, low amplitude -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="40dp"
+    android:viewportWidth="280"
+    android:viewportHeight="40">
+    <path
+        android:strokeColor="#7B2FFE"
+        android:strokeWidth="2"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,20 C4,13 6,27 10,20 C14,13 16,27 20,20 C24,13 26,27 30,20 C34,13 36,27 40,20 C44,13 46,27 50,20 C54,13 56,27 60,20 C64,13 66,27 70,20 C74,13 76,27 80,20 C84,13 86,27 90,20 C94,13 96,27 100,20 C104,13 106,27 110,20 C114,13 116,27 120,20 C124,13 126,27 130,20 C134,13 136,27 140,20 C144,13 146,27 150,20 C154,13 156,27 160,20 C164,13 166,27 170,20 C174,13 176,27 180,20 C184,13 186,27 190,20 C194,13 196,27 200,20 C204,13 206,27 210,20 C214,13 216,27 220,20 C224,13 226,27 230,20 C234,13 236,27 240,20 C244,13 246,27 250,20 C254,13 256,27 260,20 C264,13 266,27 270,20 C274,13 276,27 280,20" />
+</vector>

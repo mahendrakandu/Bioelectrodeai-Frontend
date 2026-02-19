@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="100dp"
+    android:viewportWidth="300"
+    android:viewportHeight="100">
+
+    <!-- Grid Background -->
+    <path
+        android:pathData="M0,20 L300,20 M0,40 L300,40 M0,60 L300,60 M0,80 L300,80"
+        android:strokeColor="#2226C6DA"
+        android:strokeWidth="1"/>
+    <path
+        android:pathData="M20,0 L20,100 M40,0 L40,100 M60,0 L60,100 M80,0 L80,100 M100,0 L100,100 M120,0 L120,100 M140,0 L140,100 M160,0 L160,100 M180,0 L180,100 M200,0 L200,100 M220,0 L220,100 M240,0 L240,100 M260,0 L260,100 M280,0 L280,100"
+        android:strokeColor="#2226C6DA"
+        android:strokeWidth="1"/>
+
+    <!-- Monopolar Signal: Wandering baseline, higher amplitude events, fuzzier -->
+    <!-- We simulate "fuzz" by small jitters in the line path -->
+    <path
+        android:pathData="M0,50 L10,52 L20,48 L30,55 
+                          L40,20 L50,10 L60,85 L70,95 L80,50
+                          L90,52 L100,48 L110,60 L120,40
+                          L130,55 L140,25 L150,15 L160,90 L170,100 L180,55
+                          L190,58 L200,42 L210,65 L220,35
+                          L230,60 L240,30 L250,20 L260,95 L270,105 L280,60
+                          L290,55 L300,50"
+        android:strokeColor="#26C6DA"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+        
+    <!-- Baseline Drift line (subtle) -->
+    <path 
+        android:pathData="M0,50 Q75,70 150,50 T300,50"
+        android:strokeColor="#1026C6DA"
+        android:strokeWidth="15"/>
+</vector>

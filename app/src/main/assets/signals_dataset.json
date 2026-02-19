@@ -1,0 +1,49 @@
+{
+  "signals": [
+    {
+      "signalType": "ECG",
+      "bipolar": {
+        "amplitude": 1.5,
+        "noiseLevel": 0.05,
+        "snr": 30.0,
+        "stability": 95.0
+      },
+      "monopolar": {
+        "amplitude": 2.0,
+        "noiseLevel": 0.2,
+        "snr": 10.0,
+        "stability": 75.0
+      }
+    },
+    {
+      "signalType": "EEG",
+      "bipolar": {
+        "amplitude": 50.0,
+        "noiseLevel": 5.0,
+        "snr": 10.0,
+        "stability": 92.0
+      },
+      "monopolar": {
+        "amplitude": 120.0,
+        "noiseLevel": 20.0,
+        "snr": 6.0,
+        "stability": 68.0
+      }
+    },
+    {
+      "signalType": "EMG",
+      "bipolar": {
+        "amplitude": 3.0,
+        "noiseLevel": 0.1,
+        "snr": 30.0,
+        "stability": 88.0
+      },
+      "monopolar": {
+        "amplitude": 5.0,
+        "noiseLevel": 0.8,
+        "snr": 6.25,
+        "stability": 60.0
+      }
+    }
+  ]
+}

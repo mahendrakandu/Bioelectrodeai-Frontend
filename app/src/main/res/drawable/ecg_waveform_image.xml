@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="120dp"
+    android:viewportWidth="360"
+    android:viewportHeight="120">
+
+    <!-- Dark background -->
+    <path
+        android:fillColor="#1A1A2E"
+        android:pathData="M0,0 L360,0 L360,120 L0,120 Z" />
+
+    <!-- Grid lines (subtle) -->
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M0,30 L360,30" />
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M0,60 L360,60" />
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M0,90 L360,90" />
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M60,0 L60,120" />
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M120,0 L120,120" />
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M180,0 L180,120" />
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M240,0 L240,120" />
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="0.5"
+        android:pathData="M300,0 L300,120" />
+
+    <!-- ECG label -->
+    <path
+        android:fillColor="#E53935"
+        android:pathData="M10,8 L35,8 L35,18 L10,18 Z" />
+
+    <!-- ECG Waveform Path: flat -> P wave -> flat -> Q dip -> R peak -> S dip -> flat -> T wave -> flat -->
+    <!-- First beat -->
+    <path
+        android:strokeColor="#E53935"
+        android:strokeWidth="2.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="
+            M10,60
+            L50,60
+            L55,50 L60,60
+            L65,60
+            L68,63
+            L72,15
+            L76,70
+            L80,60
+            L85,60
+            L90,50
+            L100,60
+            L110,60" />
+
+    <!-- Second beat -->
+    <path
+        android:strokeColor="#E53935"
+        android:strokeWidth="2.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="
+            M110,60
+            L150,60
+            L155,50 L160,60
+            L165,60
+            L168,63
+            L172,15
+            L176,70
+            L180,60
+            L185,60
+            L190,50
+            L200,60
+            L210,60" />
+
+    <!-- Third beat -->
+    <path
+        android:strokeColor="#E53935"
+        android:strokeWidth="2.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="
+            M210,60
+            L250,60
+            L255,50 L260,60
+            L265,60
+            L268,63
+            L272,15
+            L276,70
+            L280,60
+            L285,60
+            L290,50
+            L300,60
+            L350,60" />
+</vector>

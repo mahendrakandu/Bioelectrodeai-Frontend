@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ✅ Internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- (Optional but recommended for some networks) -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Learning"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true">
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- Onboarding Activity - Entry Point -->
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"> <!-- Material Components theme for MaterialButton -->
+        </activity>
+
+        <!-- Splash Activity - New Entry Point -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- Main Activity - After Login -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Profile Activity -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+
+        <!-- Edit Profile Activity -->
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+
+        <!-- Forgot Password Activity -->
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+
+        <!-- Settings Activity -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <!-- App Map Activity -->
+        <activity
+            android:name=".AppMapActivity"
+            android:exported="false" />
+
+        <!-- Learning Topics Activity -->
+        <activity
+            android:name=".LearningTopicsActivity"
+            android:exported="false" />
+
+        <!-- ECG Detail Activity -->
+        <activity
+            android:name=".EcgDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".LearningTopicsActivity" />
+
+        <!-- EEG Detail Activity -->
+        <activity
+            android:name=".EegDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".LearningTopicsActivity" />
+
+        <!-- EMG Detail Activity -->
+        <activity
+            android:name=".EmgDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".LearningTopicsActivity" />
+
+        <!-- Electrode Placement Activity -->
+        <activity
+            android:name=".ElectrodePlacementActivity"
+            android:exported="false"
+            android:parentActivityName=".LearningTopicsActivity" />
+
+        <!-- Topic Detail Activity -->
+        <activity
+            android:name=".TopicDetailActivity"
+            android:exported="false" />
+
+        <!-- How It Works Activity -->
+        <activity
+            android:name=".HowItWorksActivity"
+            android:exported="false" />
+
+        <!-- Advantages Activity -->
+        <activity
+            android:name=".AdvantagesActivity"
+            android:exported="false" />
+
+        <!-- Disadvantages Activity -->
+        <activity
+            android:name=".DisadvantagesActivity"
+            android:exported="false" />
+
+        <!-- Applications Activity -->
+        <activity
+            android:name=".ApplicationsActivity"
+            android:exported="false" />
+
+        <!-- Monopolar Intro Activity -->
+        <activity
+            android:name=".MonopolarIntroActivity"
+            android:exported="false" />
+
+        <!-- Comparison Activity -->
+        <activity
+            android:name=".ComparisonActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Pros & Cons Activity -->
+        <activity
+            android:name=".ProsConsActivity"
+            android:exported="false"
+            android:parentActivityName=".ComparisonActivity" />
+
+        <!-- Decision Guide Activity -->
+        <activity
+            android:name=".DecisionGuideActivity"
+            android:exported="false"
+            android:parentActivityName=".ComparisonActivity" />
+
+        <!-- Signal Quality Activity -->
+        <activity
+            android:name=".SignalQualityActivity"
+            android:exported="false"
+            android:parentActivityName=".ComparisonActivity" />
+
+        <!-- Clinical Cases Activity -->
+        <activity
+            android:name=".ClinicalCasesActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Resources Library Activity -->
+        <activity
+            android:name=".ResourcesLibraryActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Glossary Activity -->
+        <activity
+            android:name=".GlossaryActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Privacy Policy Activity -->
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity" />
+
+        <!-- Terms & Conditions Activity -->
+        <activity
+            android:name=".TermsConditionsActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity" />
+
+        <!-- Help & Support Activity -->
+        <activity
+            android:name=".HelpSupportActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity" />
+
+        <!-- Language Activity -->
+        <activity
+            android:name=".LanguageActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity" />
+
+        <!-- Download Content Activity -->
+        <activity
+            android:name=".DownloadContentActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity" />
+
+        <!-- Storage Usage Activity -->
+        <activity
+            android:name=".StorageUsageActivity"
+            android:exported="false"
+            android:parentActivityName=".SettingsActivity" />
+
+        <!-- Downloaded Content Activity -->
+        <activity
+            android:name=".DownloadedContentActivity"
+            android:exported="false"
+            android:parentActivityName=".DownloadContentActivity" />
+
+        <!-- Case Detail Activity -->
+        <activity
+            android:name=".CaseDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".ClinicalCasesActivity" />
+
+        <!-- Quiz Activity -->
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Quiz Results Activity -->
+        <activity
+            android:name=".QuizResultsActivity"
+            android:exported="false"
+            android:parentActivityName=".QuizActivity" />
+
+
+        <!-- Comparison Activity Test -->
+        <activity
+            android:name=".ComparisonActivityTest"
+            android:exported="false" />
+
+        <!-- Comparison Report Activity -->
+        <activity
+            android:name=".ComparisonReportActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

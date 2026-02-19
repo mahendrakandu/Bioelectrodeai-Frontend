@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Theta wave: medium frequency -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="40dp"
+    android:viewportWidth="280"
+    android:viewportHeight="40">
+    <path
+        android:strokeColor="#7B2FFE"
+        android:strokeWidth="2"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,20 C10,5 20,35 30,20 C40,5 50,35 60,20 C70,5 80,35 90,20 C100,5 110,35 120,20 C130,5 140,35 150,20 C160,5 170,35 180,20 C190,5 200,35 210,20 C220,5 230,35 240,20 C250,5 260,35 270,20 C275,12 278,28 280,20" />
+</vector>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_back" app:tint="@android:color/white" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back" android:textColor="@android:color/white" android:textSize="15sp" android:textStyle="bold" android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pros &amp; Cons Analysis" android:textColor="@android:color/white" android:textSize="24sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Detailed advantages &amp; disadvantages" android:textColor="#B3E5FC" android:textSize="14sp" android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ========== BIPOLAR RECORDING ========== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_left_border_teal"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="3dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚡ Bipolar Recording" android:textColor="#0D47A1" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="14dp" />
+
+                <!-- Advantages Header -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Advantages" android:textColor="#2E7D32" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+
+                <!-- Advantage 1 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Superior Noise Rejection" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Common-mode rejection eliminates 90%+ artifacts and interference" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 2 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="High Spatial Resolution" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Precise activity localization between electrode pair" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 3 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cleaner Waveforms" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Minimal baseline drift and motion artifact contamination" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 4 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ideal for Noisy Environments" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Excellent performance in OR, ICU with multiple devices" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 5 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Higher Diagnostic Accuracy" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="94% accuracy rate for precise signal recording" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Disadvantages Header -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Disadvantages" android:textColor="#D32F2F" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+
+                <!-- Disadvantage 1 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗" android:textColor="#F44336" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Complex Setup" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Requires precise electrode positioning, spacing and alignment" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Disadvantage 2 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗" android:textColor="#F44336" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lower Signal Amplitude" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Difference signal is smaller than absolute measurement" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Disadvantage 3 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗" android:textColor="#F44336" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Higher Cost" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="More expensive equipment and specialized training needed" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Disadvantage 4 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗" android:textColor="#F44336" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Limited Availability" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Only available in specialized labs &amp; tertiary care centers" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ========== MONOPOLAR RECORDING ========== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_left_border_teal"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="3dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📡 Monopolar Recording" android:textColor="#00695C" android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="14dp" />
+
+                <!-- Advantages Header -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Advantages" android:textColor="#2E7D32" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+
+                <!-- Advantage 1 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Simple Setup" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Single electrode + distant reference, easy placement" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 2 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Higher Signal Amplitude" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Full absolute signal captures raw, wider waveform" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 3 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Broad Spatial Coverage" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wide area capture for comprehensive neural/cardiac surveying" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 4 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lower Cost" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="More affordable equipment for routine clinical screening" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 5 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Widely Available" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Standard equipment in all clinical settings" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Advantage 6 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#4CAF50" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Faster Procedures" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quick setup, routine recording in just 5-15 minutes" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Disadvantages Header -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Disadvantages" android:textColor="#D32F2F" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+
+                <!-- Disadvantage 1 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗" android:textColor="#F44336" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Poor Noise Rejection" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Only 40-60% noise rejection, susceptible to EMI &amp; motion artifacts" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Disadvantage 2 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗" android:textColor="#F44336" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Low Spatial Resolution" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wide field of view misses localized signal changes" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Disadvantage 3 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗" android:textColor="#F44336" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="More Artifacts" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subject to motion &amp; EMI artifacts, less reliable in noisy settings" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Disadvantage 4 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗" android:textColor="#F44336" android:textSize="16sp" android:textStyle="bold" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lower Diagnostic Accuracy" android:textColor="#1A237E" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="78% accuracy rate, lacks precision for subtle findings" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ========== DECISION GUIDE ========== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_purple_teal"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="4dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🧭 Decision Guide" android:textColor="@android:color/white" android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use bipolar when: Precision matters, environment is noisy, you need localized signals" android:textColor="@android:color/white" android:alpha="0.95" android:textSize="13sp" android:lineSpacingExtra="3dp" android:layout_marginBottom="8dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use monopolar when: Quick screening needed, broad coverage, controlled &amp; quiet environment" android:textColor="@android:color/white" android:alpha="0.95" android:textSize="13sp" android:lineSpacingExtra="3dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

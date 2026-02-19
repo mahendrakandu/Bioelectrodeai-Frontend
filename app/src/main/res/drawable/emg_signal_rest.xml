@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- At Rest: flat line with tiny noise -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="40dp"
+    android:viewportWidth="280"
+    android:viewportHeight="40">
+    <path
+        android:strokeColor="#2ECC71"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,20 L20,20 L21,19 L22,21 L23,20 L50,20 L51,18 L52,22 L53,20 L80,20 L81,19 L82,21 L83,20 L110,20 L111,18 L112,22 L113,20 L140,20 L141,19 L142,21 L143,20 L170,20 L171,18 L172,22 L173,20 L200,20 L201,19 L202,21 L203,20 L230,20 L231,18 L232,22 L233,20 L260,20 L261,19 L262,21 L263,20 L280,20" />
+</vector>

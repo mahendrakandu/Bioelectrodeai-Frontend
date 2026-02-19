@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Light contraction: sparse small spikes -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="40dp"
+    android:viewportWidth="280"
+    android:viewportHeight="40">
+    <path
+        android:strokeColor="#2ECC71"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,20 L15,20 L16,14 L17,26 L18,14 L19,20 L35,20 L36,12 L37,28 L38,12 L39,20 L55,20 L56,16 L57,24 L58,16 L59,20 L80,20 L81,13 L82,27 L83,13 L84,20 L100,20 L101,12 L102,28 L103,12 L104,20 L125,20 L126,15 L127,25 L128,15 L129,20 L150,20 L151,11 L152,29 L153,11 L154,20 L175,20 L176,14 L177,26 L178,14 L179,20 L200,20 L201,12 L202,28 L203,12 L204,20 L225,20 L226,15 L227,25 L228,15 L229,20 L250,20 L251,13 L252,27 L253,13 L254,20 L275,20 L276,12 L277,28 L278,12 L280,20" />
+</vector>

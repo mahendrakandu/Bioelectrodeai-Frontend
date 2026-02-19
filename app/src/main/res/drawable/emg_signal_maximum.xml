@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Maximum contraction: very dense large spikes - full interference pattern -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="40dp"
+    android:viewportWidth="280"
+    android:viewportHeight="40">
+    <path
+        android:strokeColor="#E53935"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,20 L2,5 L4,35 L6,5 L8,35 L10,5 L12,35 L14,5 L16,35 L18,5 L20,35 L22,5 L24,35 L26,5 L28,35 L30,5 L32,35 L34,5 L36,35 L38,5 L40,35 L42,5 L44,35 L46,5 L48,35 L50,5 L52,35 L54,5 L56,35 L58,5 L60,35 L62,5 L64,35 L66,5 L68,35 L70,5 L72,35 L74,5 L76,35 L78,5 L80,35 L82,5 L84,35 L86,5 L88,35 L90,5 L92,35 L94,5 L96,35 L98,5 L100,35 L102,5 L104,35 L106,5 L108,35 L110,5 L112,35 L114,5 L116,35 L118,5 L120,35 L122,5 L124,35 L126,5 L128,35 L130,5 L132,35 L134,5 L136,35 L138,5 L140,35 L142,5 L144,35 L146,5 L148,35 L150,5 L152,35 L154,5 L156,35 L158,5 L160,35 L162,5 L164,35 L166,5 L168,35 L170,5 L172,35 L174,5 L176,35 L178,5 L180,35 L182,5 L184,35 L186,5 L188,35 L190,5 L192,35 L194,5 L196,35 L198,5 L200,35 L202,5 L204,35 L206,5 L208,35 L210,5 L212,35 L214,5 L216,35 L218,5 L220,35 L222,5 L224,35 L226,5 L228,35 L230,5 L232,35 L234,5 L236,35 L238,5 L240,35 L242,5 L244,35 L246,5 L248,35 L250,5 L252,35 L254,5 L256,35 L258,5 L260,35 L262,5 L264,35 L266,5 L268,35 L270,5 L272,35 L274,5 L276,35 L278,5 L280,20" />
+</vector>

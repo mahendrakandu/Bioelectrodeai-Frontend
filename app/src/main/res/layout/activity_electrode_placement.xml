@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ===== HEADER Red-Pink Gradient ===== -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/electrode_header_gradient"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="24dp">
+
+            <!-- Back Row -->
+            <LinearLayout
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
+                android:padding="4dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:contentDescription="Back"
+                    android:tint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <!-- Title Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Location pin circle -->
+                <FrameLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/emg_icon_circle_bg"
+                    android:layout_marginEnd="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="📍"
+                        android:textSize="22sp" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electrode Placement"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Proper positioning guide"
+                        android:textColor="#FFCDD2"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== CONTENT ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Select Signal Type Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select Signal Type"
+                        android:textColor="#1A1A2E"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- ECG Tab -->
+                        <LinearLayout
+                            android:id="@+id/tabECG"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:layout_marginEnd="6dp"
+                            android:background="@drawable/tab_selected_bg">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="❤️"
+                                android:textSize="22sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ECG"
+                                android:textColor="#E53935"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+
+                        <!-- EEG Tab -->
+                        <LinearLayout
+                            android:id="@+id/tabEEG"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:layout_marginEnd="6dp"
+                            android:background="@drawable/tab_unselected_bg">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="🧠"
+                                android:textSize="22sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="EEG"
+                                android:textColor="#888888"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+
+                        <!-- EMG Tab -->
+                        <LinearLayout
+                            android:id="@+id/tabEMG"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:background="@drawable/tab_unselected_bg">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="💪"
+                                android:textSize="22sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="EMG"
+                                android:textColor="#888888"
+                                android:textSize="12sp"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Standard 12-Lead ECG Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sectionECG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Section Title -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="❤️" android:textSize="16sp" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Standard 12-Lead ECG"
+                            android:textColor="#1A1A2E" android:textSize="16sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- RA -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RA"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Right Arm"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- LA -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LA"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Left Arm"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- RL -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RL"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Right leg (ground)"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- LL -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LL"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Left leg"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- V1 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="V1"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4th ICS, right sternal border"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- V2 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="V2"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4th ICS, left sternal border"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- V3 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="V3"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Between V2 and V4"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- V4 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="V4"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5th ICS, midclavicular line"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- V5 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="V5"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5th ICS, anterior axillary"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- V6 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/electrode_dot_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="V6"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5th ICS, midaxillary line"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#E53935" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Placement Tips Card (Red) ECG -->
+            <LinearLayout
+                android:id="@+id/sectionECGTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/placement_tips_bg"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📍" android:textSize="16sp" android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Placement Tips"
+                        android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Tip 1 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="7dp">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#FFCDD2" android:textSize="14sp"
+                        android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Clean skin with alcohol before placement"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+                <!-- Tip 2 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="7dp">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#FFCDD2" android:textSize="14sp"
+                        android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Shave excessive hair if needed"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+                <!-- Tip 3 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="7dp">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#FFCDD2" android:textSize="14sp"
+                        android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Place limb leads on fleshy areas"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+                <!-- Tip 4 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="7dp">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#FFCDD2" android:textSize="14sp"
+                        android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Precordial leads directly on chest"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+                <!-- Tip 5 -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#FFCDD2" android:textSize="14sp"
+                        android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ensure good skin contact"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ======= EEG International 10-20 System (initially GONE) ======= -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sectionEEG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="🧠" android:textSize="16sp" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="International 10-20 System"
+                            android:textColor="#1A1A2E" android:textSize="16sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Fp1/Fp2 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/dot_blue" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fp1/Fp2"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Frontal pole (forehead)"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- F3/F4 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/dot_green" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="F3/F4"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Frontal"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- F7/F8 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/dot_orange" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="F7/F8"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fronto-temporal"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- C3/C4 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/dot_blue" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="C3/C4"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Central"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- T3/T4 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/dot_purple" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="T3/T4"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Temporal"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- P3/P4 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/dot_blue" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="P3/P4"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Parietal"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- O1/O2 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/eeg_icon_circle_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="O1/O2"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Occipital"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Fz/Cz/Pz -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp" android:layout_marginBottom="6dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/dot_blue" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fz/Cz/Pz"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Midline electrodes"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- A1/A2 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:background="@drawable/eeg_electrode_row_bg"
+                        android:paddingStart="12dp" android:paddingEnd="12dp">
+                        <View android:layout_width="10dp" android:layout_height="10dp"
+                            android:background="@drawable/eeg_icon_circle_bg" android:layout_marginEnd="10dp" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="A1/A2"
+                                android:textColor="#1A1A2E" android:textSize="14sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ear lobes (reference)"
+                                android:textColor="#888888" android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView android:layout_width="24dp" android:layout_height="24dp" android:text="✓"
+                            android:textColor="#7B2FFE" android:textSize="16sp" android:gravity="center" android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- EEG Placement Tips (Purple, initially GONE) -->
+            <LinearLayout
+                android:id="@+id/sectionEEGTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/eeg_placement_tips_bg"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="📍" android:textSize="16sp" android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Placement Tips"
+                        android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="7dp">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#D1C4E9" android:textSize="14sp" android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Measure head circumference first"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="7dp">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#D1C4E9" android:textSize="14sp" android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Use conductive gel or paste"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="7dp">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#D1C4E9" android:textSize="14sp" android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Part hair to locate scalp"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="7dp">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#D1C4E9" android:textSize="14sp" android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Check impedance &lt; 5kΩ"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="top">
+                    <TextView android:layout_width="14dp" android:layout_height="wrap_content"
+                        android:text="•" android:textColor="#D1C4E9" android:textSize="14sp" android:layout_marginEnd="8dp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="Reference: linked ears or Cz"
+                        android:textColor="#FFFFFF" android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Common Mistakes Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="⊘" android:textSize="18sp" android:textColor="#E53935"
+                            android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Common Mistakes to Avoid"
+                            android:textColor="#1A1A2E" android:textSize="16sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Mistake 1 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content"
+                            android:text="✕" android:textColor="#E53935" android:textSize="14sp"
+                            android:layout_marginEnd="8dp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Placing electrodes over bony areas (poor contact)"
+                            android:textColor="#555555" android:textSize="13sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                    <!-- Mistake 2 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content"
+                            android:text="✕" android:textColor="#E53935" android:textSize="14sp"
+                            android:layout_marginEnd="8dp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Skipping skin preparation (high impedance)"
+                            android:textColor="#555555" android:textSize="13sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                    <!-- Mistake 3 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content"
+                            android:text="✕" android:textColor="#E53935" android:textSize="14sp"
+                            android:layout_marginEnd="8dp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Using dried out or old electrodes"
+                            android:textColor="#555555" android:textSize="13sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                    <!-- Mistake 4 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="top" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content"
+                            android:text="✕" android:textColor="#E53935" android:textSize="14sp"
+                            android:layout_marginEnd="8dp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Incorrect inter-electrode distance"
+                            android:textColor="#555555" android:textSize="13sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                    <!-- Mistake 5 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="top">
+                        <TextView android:layout_width="20dp" android:layout_height="wrap_content"
+                            android:text="✕" android:textColor="#E53935" android:textSize="14sp"
+                            android:layout_marginEnd="8dp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Not checking impedance before recording"
+                            android:textColor="#555555" android:textSize="13sp"
+                            android:lineSpacingMultiplier="1.4" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Pre-Recording Checklist Card (Light Green) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#E8F5E9"
+                    android:padding="16dp">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="✅" android:textSize="16sp" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Pre-Recording Checklist"
+                            android:textColor="#1B5E20" android:textSize="16sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Check 1 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="22dp" android:layout_height="wrap_content"
+                            android:text="✓" android:textColor="#2E7D32" android:textSize="15sp"
+                            android:textStyle="bold" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Skin properly cleaned and prepared"
+                            android:textColor="#2E7D32" android:textSize="13sp" />
+                    </LinearLayout>
+                    <!-- Check 2 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="22dp" android:layout_height="wrap_content"
+                            android:text="✓" android:textColor="#2E7D32" android:textSize="15sp"
+                            android:textStyle="bold" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Electrodes in correct positions"
+                            android:textColor="#2E7D32" android:textSize="13sp" />
+                    </LinearLayout>
+                    <!-- Check 3 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="22dp" android:layout_height="wrap_content"
+                            android:text="✓" android:textColor="#2E7D32" android:textSize="15sp"
+                            android:textStyle="bold" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Good electrode contact verified"
+                            android:textColor="#2E7D32" android:textSize="13sp" />
+                    </LinearLayout>
+                    <!-- Check 4 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="22dp" android:layout_height="wrap_content"
+                            android:text="✓" android:textColor="#2E7D32" android:textSize="15sp"
+                            android:textStyle="bold" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Impedance checked and acceptable"
+                            android:textColor="#2E7D32" android:textSize="13sp" />
+                    </LinearLayout>
+                    <!-- Check 5 -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="22dp" android:layout_height="wrap_content"
+                            android:text="✓" android:textColor="#2E7D32" android:textSize="15sp"
+                            android:textStyle="bold" android:layout_marginEnd="8dp" />
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cable secured to prevent movement artifacts"
+                            android:textColor="#2E7D32" android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

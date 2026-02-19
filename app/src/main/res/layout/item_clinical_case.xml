@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/caseContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_rounded"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Header with Icon and Type Badge -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <!-- Case Icon -->
+        <ImageView
+            android:id="@+id/ivCaseIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/icon_bg_blue"
+            android:padding="12dp"
+            android:src="@drawable/ic_brain"
+            app:tint="#1565C0" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <!-- Type Badge -->
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bipolar"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.05"
+                android:background="@drawable/badge_bipolar"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp" />
+
+            <!-- Case Number -->
+            <TextView
+                android:id="@+id/tvCaseNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Case #012-2024"
+                android:textColor="#666666"
+                android:textSize="11sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- Difficulty Badge -->
+        <TextView
+            android:id="@+id/tvDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advanced"
+            android:textColor="#FB8C00"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_info"
+            android:drawableTint="#FB8C00"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Case Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alzheimer's Disease: DBS Mapping"
+        android:textColor="#1A1A1A"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Specialty -->
+    <TextView
+        android:id="@+id/tvSpecialty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Neurology"
+        android:textColor="#1565C0"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:drawableStart="@drawable/ic_hospital"
+        android:drawableTint="#1565C0"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Patient Preview -->
+    <TextView
+        android:id="@+id/tvPatientPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="76-year-old male with moderate AD, MMSE 18/30, referred for DBS mapping to assess fornix stimulation candidacy."
+        android:textColor="#666666"
+        android:textSize="13sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- View Case Button -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Full Case →"
+        android:textColor="#1565C0"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:drawableEnd="@drawable/ic_arrow_right"
+        android:drawableTint="#1565C0"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical" />
+
+</LinearLayout>

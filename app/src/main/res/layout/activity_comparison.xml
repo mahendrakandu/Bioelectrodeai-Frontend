@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9FAFB">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@android:color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bipolar vs Monopolar"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete comparison guide"
+            android:textColor="#E0E0E0"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Tab Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:id="@+id/btnTabTechnical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded_blue"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginEnd="4dp">
+            <TextView
+                android:id="@+id/tvTabTechnical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Technical"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnTabClinical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_inactive_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp">
+            <TextView
+                android:id="@+id/tvTabClinical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clinical"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnTabPractical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_inactive_bg"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginStart="4dp">
+            <TextView
+                android:id="@+id/tvTabPractical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Practical"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#E0E0E0" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Visual Comparison Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Bipolar Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_bipolar_bg"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:layout_marginEnd="6dp">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_electrode_bipolar"
+                        android:background="@drawable/icon_bg_blue_rounded"
+                        android:padding="10dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bipolar"
+                        android:textColor="#1A237E"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Differential Recording"
+                        android:textColor="#666666"
+                        android:textSize="11sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <!-- Monopolar Card -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_monopolar_bg"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:layout_marginStart="6dp">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_electrode_monopolar"
+                        android:background="@drawable/icon_bg_teal_rounded"
+                        android:padding="10dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monopolar"
+                        android:textColor="#004D40"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Absolute Recording"
+                        android:textColor="#666666"
+                        android:textSize="11sp"
+                        android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ==================== TECHNICAL TAB ==================== -->
+            <LinearLayout
+                android:id="@+id/contentTechnical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!-- Signal Amplitude -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📈  Signal Amplitude"
+                        android:textColor="#1A237E"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/card_bipolar_bg"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lower" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Difference signal only" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/card_monopolar_bg"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Higher" android:textColor="#004D40" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Absolute signal strength" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Noise Rejection -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✅  Noise Rejection" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Excellent (90%+)" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Common-mode rejection eliminates noise" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_orange_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✗ Poor (40-60%)" android:textColor="#E65100" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Susceptible to EMI &amp; artifacts" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Spatial Resolution -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📍  Spatial Resolution" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ High Precision" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Localized between 2 electrodes" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_blue_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="○ Broad Coverage" android:textColor="#1565C0" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wide spatial area detected" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Frequency Response -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Frequency Response" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.1-10 kHz" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Better high-frequency capture" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_monopolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.01-100 Hz" android:textColor="#004D40" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Better low-frequency capture" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Signal-to-Noise Ratio -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Signal-to-Noise Ratio" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="SNR" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="High" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            </LinearLayout>
+                            <ProgressBar android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="6dp" style="@android:style/Widget.ProgressBar.Horizontal" android:progressDrawable="@drawable/progress_bar_green" android:progress="85" android:max="100" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_monopolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="SNR" android:textColor="#004D40" android:textSize="12sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Medium" android:textColor="#E65100" android:textSize="12sp" android:textStyle="bold" />
+                            </LinearLayout>
+                            <ProgressBar android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="6dp" style="@android:style/Widget.ProgressBar.Horizontal" android:progressDrawable="@drawable/progress_bar_orange" android:progress="55" android:max="100" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ==================== CLINICAL TAB ==================== -->
+            <LinearLayout
+                android:id="@+id/contentClinical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Best Clinical Applications -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👥  Best Clinical Applications" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Deep brain stimulation" android:textColor="#555555" android:textSize="11sp" android:layout_marginBottom="3dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Nerve conduction studies" android:textColor="#555555" android:textSize="11sp" android:layout_marginBottom="3dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Cardiac EP studies" android:textColor="#555555" android:textSize="11sp" android:layout_marginBottom="3dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ EMG recordings" android:textColor="#555555" android:textSize="11sp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_monopolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ EEG monitoring" android:textColor="#555555" android:textSize="11sp" android:layout_marginBottom="3dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Standard ECG" android:textColor="#555555" android:textSize="11sp" android:layout_marginBottom="3dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Initial screenings" android:textColor="#555555" android:textSize="11sp" android:layout_marginBottom="3dp" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Sleep studies" android:textColor="#555555" android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Diagnostic Accuracy -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Diagnostic Accuracy" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="94% Accuracy" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Precise localization minimizes false positives" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_blue_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="78% Accuracy" android:textColor="#1565C0" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Broader detection but more artifacts" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Patient Comfort -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Patient Comfort" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Moderate" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2 electrodes required close together" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Better" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Single electrode + distant reference" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Ideal Environment -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ideal Environment" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Noisy OR/ICU" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Multiple devices, EMI interference" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_monopolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quiet Labs" android:textColor="#004D40" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Controlled, minimal interference" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Typical Procedure Time -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Typical Procedure Time" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15-30 min" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Longer setup, higher precision" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ 5-15 min" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Faster setup, routine use" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ==================== PRACTICAL TAB ==================== -->
+            <LinearLayout
+                android:id="@+id/contentPractical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!-- Setup Complexity -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚙️  Setup Complexity" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_orange_border" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="More Complex" android:textColor="#E65100" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Requires precise electrode positioning &amp; spacing" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Simple" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="One active + distant reference anywhere" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Equipment Cost -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="💲  Equipment Cost" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$$$" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Higher initial investment" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ $$" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lower cost, widely available" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Technician Training -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Technician Training" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Advanced" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3-6 months specialized training" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Basic" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1-2 weeks standard training" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Equipment Maintenance -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Equipment Maintenance" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Moderate" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Regular calibration needed" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Low" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Minimal upkeep required" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Clinical Availability -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clinical Availability" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Specialized Centers" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tertiary care hospitals" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_green_border" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓ Widespread" android:textColor="#2E7D32" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All clinical settings" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Electrode Reusability -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/card_rounded" android:orientation="vertical" android:padding="14dp" android:layout_marginBottom="10dp" android:elevation="3dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Electrode Reusability" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_bipolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginEnd="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Varies" android:textColor="#0D47A1" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Depends on electrode type" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:background="@drawable/card_monopolar_bg" android:orientation="vertical" android:padding="10dp" android:layout_marginStart="6dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Varies" android:textColor="#004D40" android:textSize="12sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Disposable or reusable options" android:textColor="#555555" android:textSize="11sp" android:layout_marginTop="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ==================== AI SELECTION GUIDE ==================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ai_recommendation_bg"
+                android:orientation="horizontal"
+                android:padding="18dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🤖" android:textSize="24sp" android:layout_marginEnd="12dp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AI Selection Guide" android:textColor="@android:color/white" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Choose bipolar for precision &amp; noise rejection in noisy environments. Choose monopolar for simplicity &amp; broad coverage in quiet settings. Often, both are used complementarily!" android:textColor="@android:color/white" android:alpha="0.95" android:textSize="12sp" android:lineSpacingExtra="3dp" android:layout_marginTop="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ==================== NAVIGATION BUTTONS ==================== -->
+            <LinearLayout android:id="@+id/btnDetailedPros" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/button_rounded_green" android:gravity="center" android:padding="16dp" android:layout_marginBottom="10dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Detailed Pros &amp; Cons" android:textColor="@android:color/white" android:textSize="15sp" android:textStyle="bold" />
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_forward" app:tint="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnDecisionGuide" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/button_rounded_orange" android:gravity="center" android:padding="16dp" android:layout_marginBottom="10dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Decision Guide Tool" android:textColor="@android:color/white" android:textSize="15sp" android:textStyle="bold" />
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_forward" app:tint="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnSignalQuality" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/button_rounded_teal" android:gravity="center" android:padding="16dp" android:layout_marginBottom="10dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Signal Quality Comparison" android:textColor="@android:color/white" android:textSize="15sp" android:textStyle="bold" />
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_forward" app:tint="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/btnVisualizations" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/button_rounded_purple" android:gravity="center" android:padding="16dp" android:layout_marginBottom="16dp" android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="View Visualizations &amp; Graphs" android:textColor="@android:color/white" android:textSize="15sp" android:textStyle="bold" />
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_forward" app:tint="@android:color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

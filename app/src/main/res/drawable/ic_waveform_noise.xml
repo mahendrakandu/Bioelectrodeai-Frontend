@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="100dp"
+    android:viewportWidth="300"
+    android:viewportHeight="100">
+
+    <!-- Grid Background -->
+    <path
+        android:pathData="M0,20 L300,20 M0,40 L300,40 M0,60 L300,60 M0,80 L300,80"
+        android:strokeColor="#22FF9800"
+        android:strokeWidth="1"/>
+    <path
+        android:pathData="M20,0 L20,100 M40,0 L40,100 M60,0 L60,100 M80,0 L80,100 M100,0 L100,100 M120,0 L120,100 M140,0 L140,100 M160,0 L160,100 M180,0 L180,100 M200,0 L200,100 M220,0 L220,100 M240,0 L240,100 M260,0 L260,100 M280,0 L280,100"
+        android:strokeColor="#22FF9800"
+        android:strokeWidth="1"/>
+
+    <!-- Noise Signal: High frequency interference (e.g. 50Hz mains hum or EMG) -->
+    <path
+        android:pathData="M0,50 L5,60 L10,40 L15,65 L20,35 L25,60 L30,40 L35,55 L40,45 
+                          L45,65 L50,35 L55,60 L60,40 L65,65 L70,35 L75,60 L80,40
+                          L85,55 L90,45 L95,65 L100,35 L105,60 L110,40 L115,65 L120,35
+                          L125,60 L130,40 L135,55 L140,45 L145,65 L150,35 L155,60 L160,40
+                          L165,65 L170,35 L175,60 L180,40 L185,55 L190,45 L195,65 L200,35
+                          L205,60 L210,40 L215,65 L220,35 L225,60 L230,40 L235,55 L240,45
+                          L245,65 L250,35 L255,60 L260,40 L265,65 L270,35 L275,60 L280,40
+                          L285,55 L290,45 L300,50"
+        android:strokeColor="#E65100"
+        android:strokeWidth="1.5"
+        android:strokeLineJoin="bevel"/>
+</vector>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_header"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_back" app:tint="@android:color/white" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back" android:textColor="@android:color/white" android:textSize="15sp" android:textStyle="bold" android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Decision Guide" android:textColor="@android:color/white" android:textSize="24sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Find the right recording method" android:textColor="#B3E5FC" android:textSize="14sp" android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- How It Works Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_header"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="4dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ℹ️" android:textSize="20sp" android:layout_marginEnd="12dp" android:layout_marginTop="2dp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="How It Works" android:textColor="@android:color/white" android:textSize="15sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Answer 4 quick questions about your clinical scenario. We'll recommend the best recording method for your needs." android:textColor="@android:color/white" android:alpha="0.9" android:textSize="13sp" android:lineSpacingExtra="3dp" android:layout_marginTop="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Question 1: Recording Environment -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="14dp"
+                android:elevation="2dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1. What's your recording environment?" android:textColor="#1A237E" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/optionNoisy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Noisy (OR, ICU, Emergency)" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Multiple devices, electrical interference" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionQuiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quiet (Lab, Clinic)" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Controlled, minimal interference" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Question 2: Main Priority -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="14dp"
+                android:elevation="2dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2. What's your main priority?" android:textColor="#1A237E" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/optionPrecision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Precision &amp; Accuracy" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Exact localization is critical" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speed &amp; Simplicity" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quick setup and screening" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionCoverage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Broad Coverage" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Wide area monitoring needed" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Question 3: Budget Level -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="14dp"
+                android:elevation="2dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3. What's your budget level?" android:textColor="#1A237E" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/optionHighBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="High Budget" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Premium equipment acceptable" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionLimitedBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Limited Budget" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cost-effective solution needed" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Question 4: Technician Skill Level -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_rounded"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="14dp"
+                android:elevation="2dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4. Technician skill level?" android:textColor="#1A237E" android:textSize="15sp" android:textStyle="bold" android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:id="@+id/optionAdvanced"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Advanced / Specialized" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trained in complex procedures" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionBasic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_rounded"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:elevation="1dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Basic / General" android:textColor="#1A237E" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Standard clinical training" android:textColor="#666666" android:textSize="12sp" android:layout_marginTop="2dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Footer Info Card -->
+            <LinearLayout
+                android:id="@+id/infoCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_yellow_border"
+                android:orientation="horizontal"
+                android:padding="14dp"
+                android:layout_marginBottom="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ℹ️" android:textSize="18sp" android:layout_marginEnd="10dp" android:layout_marginTop="1dp" />
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Answer all 4 questions to receive your personalized recommendation" android:textColor="#1A237E" android:textSize="13sp" android:lineSpacingExtra="2dp" />
+            </LinearLayout>
+
+            <!-- Recommendation Card (hidden initially) -->
+            <LinearLayout
+                android:id="@+id/recommendationCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_header"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="4dp"
+                android:visibility="gone">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🎯 Our Recommendation" android:textColor="@android:color/white" android:textSize="17sp" android:textStyle="bold" android:layout_marginBottom="10dp" />
+                <TextView
+                    android:id="@+id/tvRecommendation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:alpha="0.95"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="3dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

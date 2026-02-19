@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Alpha wave: regular sinusoidal -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="40dp"
+    android:viewportWidth="280"
+    android:viewportHeight="40">
+    <path
+        android:strokeColor="#7B2FFE"
+        android:strokeWidth="2"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,20 C7,8 13,32 20,20 C27,8 33,32 40,20 C47,8 53,32 60,20 C67,8 73,32 80,20 C87,8 93,32 100,20 C107,8 113,32 120,20 C127,8 133,32 140,20 C147,8 153,32 160,20 C167,8 173,32 180,20 C187,8 193,32 200,20 C207,8 213,32 220,20 C227,8 233,32 240,20 C247,8 253,32 260,20 C267,8 273,32 280,20" />
+</vector>
